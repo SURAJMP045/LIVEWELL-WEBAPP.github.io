@@ -1,0 +1,294 @@
+.dashboard-card.greeting-card {
+  background-color: #23233a;
+  border-top: 4px solid #fbbf24;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 24px 12px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 32px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  animation: cardFadeIn 0.8s cubic-bezier(.4,0,.2,1);
+  min-width: 0;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  color:  #fbbf24;
+}
+.dashboard-card.greeting-card:hover {
+  box-shadow: 0 8px 32px rgba(251,191,36,0.15);
+  transform: translateY(-2px) scale(1.03);
+}
+@media (min-width: 600px) {
+  .dashboard-card.greeting-card {
+    padding: 32px 24px;
+  }
+}
+.card-icon.greeting {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 2.5rem;
+  color: #fbbf24;
+  opacity: 0.15;
+  pointer-events: none;
+}
+.card-title.greeting {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fbbf24 !important;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 3;
+  text-shadow: none !important;
+}
+.greeting-weather-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 8px;
+  opacity: 0;
+  animation: fadeIn 0.7s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+}
+.greeting-weather-icon {
+  width: 48px;
+  height: 48px;
+}
+.greeting-weather-info {
+  text-align: left;
+}
+.greeting-weather-meta {
+  color: #fef08a;
+  font-size: 0.95rem;
+}
+.greeting-hydrate {
+  color: #38bdf8;
+  font-weight: 600;
+}
+.greeting-error {
+  color: #f87171;
+  font-weight: 600;
+}
+.greeting-loading {
+  color: #a3a3a3;
+}
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+.dashboard-card.greeting-card.raining {
+  position: relative;
+  overflow: hidden;
+  background-color: #23233a;
+}
+.rain-effect {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.raindrop {
+  position: absolute;
+  top: -40px;
+  width: 3px;
+  height: 28px;
+  background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%);
+  border-radius: 2px;
+  opacity: 0.5;
+  animation: raindrop-fall 1.1s linear infinite;
+}
+@keyframes raindrop-fall {
+  0% { top: -40px; opacity: 0.5; }
+  80% { opacity: 0.7; }
+  100% { top: 110%; opacity: 0; }
+}
+.dashboard-card.greeting-card.raining,
+.dashboard-card.greeting-card.raining .card-title.greeting,
+.dashboard-card.greeting-card.raining .greeting-weather-info,
+.dashboard-card.greeting-card.raining .greeting-weather-meta,
+.dashboard-card.greeting-card.raining .greeting-hydrate,
+.dashboard-card.greeting-card.raining .greeting-error,
+.dashboard-card.greeting-card.raining .greeting-loading {
+  color:  #fbbf24;
+}
+.dashboard-card.greeting-card.raining .card-title.greeting {
+  color: #fbbf24;
+  text-shadow: 0 2px 8px #e0e7ff;
+  position: relative;
+  z-index: 3;
+}
+.dashboard-card.greeting-card.raining .greeting-weather-meta {
+  color: #334155;
+}
+.dashboard-card.greeting-card.raining .greeting-hydrate {
+  color: #0ea5e9;
+}
+.dashboard-card.greeting-card.raining .greeting-error {
+  color: #b91c1c;
+}
+.dashboard-card.greeting-card.raining .greeting-loading {
+  color: #334155;
+} 
+
+.dashboard-card.greeting-card.snowing {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #23233a 0%, #64748b 100%);
+}
+.snow-effect {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.snowflake {
+  position: absolute;
+  top: -30px;
+  font-size: 1.3rem;
+  color: #e0e7ef;
+  opacity: 0.8;
+  animation: snow-fall 2.5s linear infinite;
+  user-select: none;
+}
+@keyframes snow-fall {
+  0% { top: -30px; opacity: 0.8; }
+  80% { opacity: 1; }
+  100% { top: 110%; opacity: 0; }
+}
+
+.dashboard-card.greeting-card.thunder {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #23233a 0%, #6366f1 100%);
+}
+.thunder-effect {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.lightning {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #fff 0%, #facc15 100%);
+  opacity: 0;
+  border-radius: 3px;
+  animation: lightning-flash 3.5s infinite;
+}
+@keyframes lightning-flash {
+  0%, 97%, 100% { opacity: 0; }
+  98% { opacity: 0.8; }
+  99% { opacity: 0.2; }
+}
+
+.dashboard-card.greeting-card.sunny {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #23233a 0%, #fbbf24 100%);
+}
+.sunny-effect {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.sun-glow {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fde047 0%, #fbbf24 60%, transparent 100%);
+  opacity: 0.25;
+  margin-top: -40px;
+  filter: blur(2px);
+}
+
+.dashboard-card.greeting-card.cloudy {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #23233a 0%, #64748b 100%);
+}
+.cloud-effect {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.cloud {
+  position: absolute;
+  bottom: 10px;
+  width: 80px;
+  height: 36px;
+  background: #e0e7ef;
+  border-radius: 50px 50px 40px 40px;
+  opacity: 0.7;
+  filter: blur(1px);
+}
+.cloud1 { left: 10%; width: 70px; bottom: 18px; }
+.cloud2 { left: 40%; width: 90px; bottom: 10px; }
+.cloud3 { left: 70%; width: 60px; bottom: 22px; }
+.cloud4 { left: 80%; width: 50px; bottom: 30px; }
+
+.dashboard-card.greeting-card.foggy {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #23233a 0%, #a3a3a3 100%);
+}
+.fog-effect {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: repeating-linear-gradient(180deg, rgba(156,163,175,0.10) 0px, rgba(156,163,175,0.18) 8px, transparent 16px, transparent 32px);
+  opacity: 0.7;
+}
+
+/* Font color tweaks for effects */
+.dashboard-card.greeting-card.snowing,
+.dashboard-card.greeting-card.thunder,
+.dashboard-card.greeting-card.sunny,
+.dashboard-card.greeting-card.cloudy,
+.dashboard-card.greeting-card.foggy {
+  color: #fef9c3;
+}
+.dashboard-card.greeting-card.sunny .card-title.greeting {
+  color: #f59e42;
+  text-shadow: 0 2px 8px #fde047;
+}
+.dashboard-card.greeting-card.snowing .card-title.greeting,
+.dashboard-card.greeting-card.cloudy .card-title.greeting,
+.dashboard-card.greeting-card.foggy .card-title.greeting {
+  color: #2563eb;
+  text-shadow: 0 2px 8px #e0e7ef;
+}
+.dashboard-card.greeting-card.thunder .card-title.greeting {
+  color: #facc15;
+  text-shadow: 0 2px 8px #c7d2fe;
+} 
+
+.greeting-voice-btn {
+  margin-left: 12px;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: color 0.2s, transform 0.15s;
+}
+.greeting-voice-btn:hover, .greeting-voice-btn:focus {
+  color: #06b6d4;
+  outline: none;
+  transform: scale(1.15);
+} 

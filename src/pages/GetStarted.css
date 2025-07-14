@@ -1,0 +1,72 @@
+body, html {
+  height: 100%;
+  width: 100%;
+}
+.getstarted-bg {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(135deg, #181825 0%, #23233a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.getstarted-container {
+  min-height: 400px;
+  min-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 4px 32px rgba(99,102,241,0.10);
+  padding: 56px 32px;
+  margin: 0;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.getstarted-container h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #06b6d4;
+  margin-bottom: 12px;
+}
+.getstarted-container p {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+.getstarted-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+.getstarted-btn {
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: none;
+  background: #e2e8f0;
+  color: #213547;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(6,182,212,0.08);
+}
+.getstarted-btn.primary {
+  background: #06b6d4;
+  color: #fff;
+}
+.getstarted-btn.primary:hover {
+  background: #0891b2;
+  transform: scale(1.05);
+}
+.getstarted-btn:hover {
+  background: #cbd5e1;
+  transform: scale(1.05);
+} 
