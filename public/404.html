@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/#/" />
+    <script>
+      // For direct deep links, redirect to the hash route
+      if (location.pathname !== '/' && !location.hash) {
+        location.replace('/#' + location.pathname + location.search + location.hash);
+      }
+    </script>
+  </head>
+  <body></body>
+</html> 
