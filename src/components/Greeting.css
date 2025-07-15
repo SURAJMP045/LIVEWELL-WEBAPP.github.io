@@ -234,11 +234,90 @@
   border-radius: 50px 50px 40px 40px;
   opacity: 0.7;
   filter: blur(1px);
+  animation: cloud-move 20s linear infinite;
 }
-.cloud1 { left: 10%; width: 70px; bottom: 18px; }
-.cloud2 { left: 40%; width: 90px; bottom: 10px; }
-.cloud3 { left: 70%; width: 60px; bottom: 22px; }
-.cloud4 { left: 80%; width: 50px; bottom: 30px; }
+.cloud1 { 
+  left: -100px; 
+  width: 70px; 
+  bottom: 18px; 
+  animation-delay: 0s;
+  animation-duration: 25s;
+}
+.cloud2 { 
+  left: -100px; 
+  width: 90px; 
+  bottom: 10px; 
+  animation-delay: 5s;
+  animation-duration: 30s;
+}
+.cloud3 { 
+  left: -100px; 
+  width: 60px; 
+  bottom: 22px; 
+  animation-delay: 10s;
+  animation-duration: 22s;
+}
+.cloud4 { 
+  left: -100px; 
+  width: 50px; 
+  bottom: 30px; 
+  animation-delay: 15s;
+  animation-duration: 28s;
+}
+
+@keyframes cloud-move {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+/* Mobile responsive styles for cloud effect */
+@media (max-width: 480px) {
+  .cloud {
+    animation-duration: 15s;
+  }
+  .cloud1 {
+    animation-duration: 18s;
+  }
+  .cloud2 {
+    animation-duration: 22s;
+  }
+  .cloud3 {
+    animation-duration: 16s;
+  }
+  .cloud4 {
+    animation-duration: 20s;
+  }
+}
+
+@media (max-width: 360px) {
+  .cloud {
+    animation-duration: 12s;
+  }
+  .cloud1 {
+    animation-duration: 15s;
+  }
+  .cloud2 {
+    animation-duration: 18s;
+  }
+  .cloud3 {
+    animation-duration: 14s;
+  }
+  .cloud4 {
+    animation-duration: 16s;
+  }
+}
 
 .dashboard-card.greeting-card.foggy {
   position: relative;
