@@ -9,6 +9,7 @@
   transition: box-shadow 0.2s, transform 0.2s;
   animation: cardFadeIn 0.8s cubic-bezier(.4,0,.2,1);
   min-width: 0;
+  min-height: 200px;
   color: #fbcfe8;
   perspective: 1200px;
   position: relative;
@@ -20,6 +21,45 @@
 @media (min-width: 600px) {
   .dashboard-card.mood-card {
     padding: 32px 24px;
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-card.mood-card {
+    padding: 20px 12px;
+    min-height: 180px;
+  }
+  .card-title.mood {
+    font-size: 1.3rem;
+  }
+  .mood-btn {
+    font-size: 1.8rem;
+  }
+  .mood-display {
+    font-size: 1rem;
+  }
+  .mood-display span {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .dashboard-card.mood-card {
+    padding: 16px 8px;
+    min-height: 160px;
+  }
+  .card-title.mood {
+    font-size: 1.1rem;
+  }
+  .mood-btn {
+    font-size: 1.6rem;
+  }
+  .mood-display {
+    font-size: 0.9rem;
+  }
+  .mood-display span {
+    font-size: 1.1rem;
   }
 }
 .card-icon.mood {
