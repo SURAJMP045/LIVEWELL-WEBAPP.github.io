@@ -22,6 +22,30 @@
     padding: 32px 24px;
   }
 }
+
+@media (max-width: 480px) {
+  .dashboard-card.focus-card {
+    padding: 16px 12px;
+  }
+  .focus-timer-value {
+    font-size: 1.8rem;
+  }
+  .card-title.focus {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .dashboard-card.focus-card {
+    padding: 12px 8px;
+  }
+  .focus-timer-value {
+    font-size: 1.5rem;
+  }
+  .card-title.focus {
+    font-size: 1.1rem;
+  }
+}
 .card-icon.focus {
   position: absolute;
   top: 24px;

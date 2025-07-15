@@ -68,14 +68,14 @@ body {
 }
 @media (max-width: 480px) {
   .dashboard-container {
-    padding: 8px 1vw;
+    padding: 8px 12px;
     width: 100%;
     overflow-x: hidden;
   }
   .dashboard-grid {
     gap: 12px;
     margin-top: 12px;
-    padding: 0 4px;
+    padding: 0;
     width: 100%;
   }
   .dashboard-card {
@@ -84,6 +84,7 @@ body {
     width: 100%;
     min-width: 0;
     overflow: hidden;
+    margin-bottom: 12px;
   }
   .app-header .title {
     font-size: 1.1rem;
@@ -105,16 +106,17 @@ body {
 
 @media (max-width: 360px) {
   .dashboard-container {
-    padding: 4px 0.5vw;
+    padding: 4px 8px;
   }
   .dashboard-grid {
     gap: 8px;
     margin-top: 8px;
-    padding: 0 2px;
+    padding: 0;
   }
   .dashboard-card {
     padding: 0.75rem;
     font-size: 0.9rem;
+    margin-bottom: 8px;
   }
   .app-header .title {
     font-size: 1rem;
@@ -122,6 +124,41 @@ body {
   .app-header .logo {
     font-size: 1.1rem;
     margin-right: 4px;
+  }
+}
+
+@media (max-width: 320px) {
+  .dashboard-container {
+    padding: 2px 4px;
+  }
+  .dashboard-grid {
+    gap: 6px;
+    margin-top: 6px;
+  }
+  .dashboard-card {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+  .app-header {
+    padding: 12px 8px;
+  }
+  .app-header .title {
+    font-size: 0.9rem;
+  }
+  .app-header .logo {
+    font-size: 1rem;
+    margin-right: 3px;
+  }
+  .logout-btn {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    margin-right: 4px;
+  }
+  .profile-initial-btn, .theme-toggle-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
   }
 }
 /* Ensure text and buttons scale and wrap */
@@ -190,6 +227,29 @@ body {
   .app-header .logo {
     font-size: 1.4rem;
     margin-right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 16px 12px;
+  }
+  .app-header .title {
+    font-size: 1.1rem;
+  }
+  .app-header .logo {
+    font-size: 1.3rem;
+    margin-right: 6px;
+  }
+  .logout-btn {
+    padding: 6px 16px;
+    font-size: 0.9rem;
+    margin-right: 8px;
+  }
+  .profile-initial-btn, .theme-toggle-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
   }
 }
 
