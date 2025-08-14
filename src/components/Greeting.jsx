@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Greeting.css';
 import PropTypes from 'prop-types';
 
-const WEATHER_API_KEY = '7a6437836b834a80936183406251407'; 
+const WEATHER_API_KEY = '9aef68d455204f9699f170200251408'; 
 
 function RainEffect() {
   return (
